@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TileView: View {
     
-    //MARK: stored properties
+    // MARK: Stored properties
     let state: String
-    //MARK: Computed property
+    
+    // MARK: Computed property
     var body: some View {
         Text(state)
             .font(.largeTitle)
@@ -22,6 +23,6 @@ struct TileView: View {
 
 struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        TileView(state: "")
+        TileView(state: cross)
     }
 }

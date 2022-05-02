@@ -8,8 +8,35 @@
 import SwiftUI
 
 struct GameBoardView: View {
+    
+    // MARK: Stored properties
+    
+    // MARK: Computed properties
     var body: some View {
-        Text("This is the game board")
+        VStack {
+            
+            // Top row
+            HStack {
+                TileView(state: nought)
+                TileView(state: cross)
+                TileView(state: nought)
+            }
+            
+            // Middle row
+            HStack {
+                TileView(state: cross)
+                TileView(state: cross)
+                TileView(state: nought)
+            }
+            
+            // Bottom row
+            HStack {
+                TileView(state: empty)
+                TileView(state: nought)
+                TileView(state: nought)
+            }
+            
+        }
     }
 }
 
