@@ -11,19 +11,20 @@ struct GameBoardView: View {
     
     // MARK: Stored properties
   
-    // game bored state (all nine positions)
-   // upper row
+    // Game bored state (all nine positions)
+    // Top row
     @State var upperLeft = empty
     @State var upperMiddle = empty
     @State var upperRight = empty
-    // middle row
+    // Middle row
     @State var middleLeft = empty
     @State var middleMiddle = empty
     @State var middleRight = empty
-    //bottom row
+    // Bottom row
     @State var bottomLeft = empty
     @State var bottomMiddle = empty
     @State var bottomRight = empty
+    
     // MARK: Computed properties
     var body: some View {
         VStack {
