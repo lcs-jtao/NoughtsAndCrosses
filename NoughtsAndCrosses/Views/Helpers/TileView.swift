@@ -10,7 +10,7 @@ import SwiftUI
 struct TileView: View {
     
     // MARK: Stored properties
-    let state: String
+    @Binding var state: String
     
     // MARK: Computed property
     var body: some View {
@@ -18,11 +18,15 @@ struct TileView: View {
             .font(.largeTitle)
             .frame(width: 50, height: 50)
             .border(Color.black, width: 3)
+            .onTapGesture {
+                // Change to a nought
+                state = nought
+            }
     }
 }
 
 struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        TileView(state: cross)
+        TileView(state: .constant(cross))
     }
 }
