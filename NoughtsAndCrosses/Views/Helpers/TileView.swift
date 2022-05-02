@@ -18,6 +18,10 @@ struct TileView: View {
             .font(.largeTitle)
             .frame(width: 50, height: 50)
             .border(Color.black, width: 3)
+            .animation(
+                Animation
+                    .default
+            )
             .onTapGesture {
                 // Change to a nought
                 state = nought
